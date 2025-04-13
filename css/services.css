@@ -1,0 +1,392 @@
+/* Services Overview */
+.services-overview {
+  padding: 5rem 2rem;
+  background-color: var(--bg-color);
+}
+
+.overview-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.overview-content .lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Main Services */
+.main-services {
+  padding: 5rem 2rem;
+  background-color: var(--bg-dark);
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-tab-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.service-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.service-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--bg-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.service-tab:hover {
+  background-color: rgba(67, 97, 238, 0.1);
+  color: var(--primary-color);
+}
+
+.service-tab.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.service-tab i {
+  font-size: 1.2rem;
+}
+
+.service-content-container {
+  position: relative;
+  min-height: 400px;
+}
+
+.service-content {
+  display: none;
+  animation: fadeIn 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.service-content.active {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.service-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.service-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+.service-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.service-features {
+  margin: 1.5rem 0;
+}
+
+.service-features li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.service-features li i {
+  color: var(--success-color);
+}
+
+/* Process Section */
+.process {
+  padding: 5rem 2rem;
+  background-color: var(--bg-color);
+}
+
+.process-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.process-step {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.process-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: -30px;
+  width: 60px;
+  height: 2px;
+  background-color: var(--border-color);
+}
+
+.step-number {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.step-content h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.step-content p {
+  color: var(--text-light);
+}
+
+/* Pricing Section */
+.pricing {
+  padding: 5rem 2rem;
+  background-color: var(--bg-dark);
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.pricing-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.pricing-card.featured {
+  transform: scale(1.05);
+  border: 2px solid var(--primary-color);
+  z-index: 1;
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.5rem 2rem;
+  transform: rotate(45deg);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.pricing-header {
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(67, 97, 238, 0.05);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pricing-header h3 {
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.currency {
+  font-size: 1.5rem;
+  vertical-align: super;
+}
+
+.pricing-header p {
+  color: var(--text-light);
+}
+
+.pricing-features {
+  padding: 2rem;
+}
+
+.pricing-features ul li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pricing-features ul li i {
+  color: var(--success-color);
+}
+
+.pricing-footer {
+  padding: 0 2rem 2rem;
+  text-align: center;
+}
+
+.pricing-note {
+  text-align: center;
+  color: var(--text-light);
+}
+
+.pricing-note a {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 5rem 2rem;
+  background-color: var(--bg-color);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1.5rem;
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.faq-question:hover {
+  background-color: rgba(67, 97, 238, 0.05);
+}
+
+.faq-question h3 {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+}
+
+.faq-toggle {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faq-item.active .faq-answer {
+  padding: 1.5rem;
+  max-height: 500px;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .process-step:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-content.active {
+    position: relative;
+    flex-direction: column;
+  }
+
+  .service-image {
+    min-height: 250px;
+  }
+
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+
+  .pricing-card.featured:hover {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 576px) {
+  .service-tab {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

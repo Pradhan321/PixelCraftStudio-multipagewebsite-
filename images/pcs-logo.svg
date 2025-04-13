@@ -1,0 +1,27 @@
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for Logo Text -->
+    <linearGradient id="gradText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d1ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e90ff;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Pixel-style square symbol -->
+    <pattern id="pixel" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#00d1ff"/>
+      <rect x="5" y="5" width="5" height="5" fill="#1e1e2f"/>
+    </pattern>
+  </defs>
+
+  <!-- Symbol/icon -->
+  <rect x="20" y="30" width="50" height="50" fill="url(#pixel)" rx="4" ry="4" />
+
+  <!-- Text -->
+  <text x="85" y="70"
+        font-family="Segoe UI, sans-serif"
+        font-size="28"
+        fill="url(#gradText)"
+        font-weight="bold">
+    PixelCraftStudio
+  </text>
+</svg>
